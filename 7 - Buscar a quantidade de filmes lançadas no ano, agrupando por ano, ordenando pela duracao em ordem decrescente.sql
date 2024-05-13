@@ -1,7 +1,7 @@
 SELECT 
-	Ano,
-	COUNT() Quantidade
+	[Ano],
+	COUNT(*) [Quantidade]
 FROM [Filmes]
-ORDER BY Quantidade DESC
-
-SELECT * FROM [Filmes]
+WHERE [Duracao] <> ''
+GROUP BY [Ano]
+ORDER BY [Quantidade] DESC
